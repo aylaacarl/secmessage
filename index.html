@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Rahasia</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Menghindari scroll karena tetesan hujan */
+            background-color: #2c3e50; /* Warna latar belakang */
+            position: relative; /* Memungkinkan penempatan elemen anak */
+        }
+        h1 {
+            margin-top: 50px;
+            color: white; /* Warna judul tetap putih */
+            text-align: center;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 1.2em;
+            padding: 20px;
+            background-color: rgba(169, 169, 169, 0.8); /* Latar belakang pesan abu-abu */
+            border-radius: 5px;
+            text-align: left;
+            display: inline-block;
+            max-width: 800px;
+            color: black; /* Warna font pesan hitam */
+        }
+        audio {
+            margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto; /* Memusatkan elemen audio */
+        }
+        .raindrop {
+            position: absolute;
+            top: -50px;
+            width: 2px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.5);
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>This Little Secret Message for You</h1>
+    <div class="message">
+        Happy Birthday yang kesembilan belas ka. Semoga ini bukan ulang tahun terakhir. Maaf, aku nggak ada maksud khusus ngucapin, kaka, tapi hanya ingin balas ucapin karena sewaktu aku ultah kemarin, kaka juga ngucapin. Aku hanya sekali ini aja, kok, tenang, karena cuma sebatas mau balas aja dan nggak ada niatan tiap tahun kayak gini.<br><br>
+
+        Aku nggak mau bahas-bahas kegabutan hubungan yang kita lakuin kemarin, tapi lebih ke psikologis kaka. Ka, aku nggak mau secara langsung ngetik gini, tapi bicara pembicaraan kaka sama roihanah nggak usah repot-repot klarifikasi atau jelasin kayak gitu, ka, yang padahal simple-nya ya memang mau nyoba-nyoba aja sampai sebulan ke depan. Sampai bilang nggak bisa nemenin, jarang ada waktu, nggak bisa jadiin prioritas, shut all that things. It’s all just because you never really fall in love and cuz I fell first. Aku nggak tahu, ka, kaka kayak gitu supaya dapat pengakuan di lingkungan sosial kaka, atau karena memang kaka nggak nemuin yang lebih baik dari ex kaka, yang kaka bilang best of the best itu? Makanya kaka coba-coba semua cewek di kala hati kaka kosong, karena emang hati kaka nggak bisa kosong? Ntahlah, I just hope you understand what I mean just now. Nggak-nggak, aku bilang gitu bukan karena aku sakit hati, aku cuma "bertanya-tanya" atas dasar apa kaka kayak gitu? Atau itu just your lifestyle, kah? Atau emang ada faktor lain yang melatarbelakangi? Mungkin aku memang bukan orang seperti orang-orang terdekat kaka yang bisa dijadikan tempat deep talk, padahal kemarin tuh aku sering kepikiran mau ngajak kaka deep talk karena meskipun selalu ragu sama semua yang diucapin kaka, tapi selalu ada setitik poin yang aku tangkap yang bikin aku mikir, "kayaknya ini beneran dari hati deh". Soalnya aku nggak pernah tahu kaka ngomong gitu berdasarkan logika (hanya sebatas ucapan) atau beneran isi hati.<br><br>
+
+        Maaf sekali jika statemen yang aku berikan menyinggung atau terkesan mengatur kaka, padahal aku bukan siapa-siapa kaka, tapi tolong pahami saja maksud aku di atas. Itu saja. Terima kasih. Have a good life. Good luck.<br><br>
+
+        Oiya aku balikin bunga nya karna aku gaenak kaka kemarin harus pura² sampai beli bunga begitu, maaf kalo roihanah maksa kaka banget. Kasih ke Baby aja ka, atau jual lagi mungkin? karna masih bagus menurutku. Oya juga salam buat Baby dari kaka Caroline (kinda miss her cute voice).
+    </div>
+    <audio controls loop>
+        <source src="https://drive.google.com/uc?id=1whPHkxQKJ1t0blJNat8QOFpta33EMhR-" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Menambahkan elemen tetesan hujan -->
+    <script>
+        function createRaindrop() {
+            const raindrop = document.createElement('div');
+            raindrop.classList.add('raindrop');
+            raindrop.style.left = Math.random() * window.innerWidth + 'px'; // Posisi acak
+            raindrop.style.animationDuration = Math.random() * 1 + 1 + 's'; // Durasi acak
+            document.body.appendChild(raindrop);
+            setTimeout(() => {
+                raindrop.remove(); // Menghapus tetesan setelah selesai
+            }, 2000);
+        }
+
+        setInterval(createRaindrop, 200); // Membuat tetesan setiap 200 ms
+    </script>
+</body>
+</html>
