@@ -1,71 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pesan Rahasia</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> <!-- Menambahkan font huruf sambung yang vintage -->
+    <!-- Link font Halimun -->
+    <link href="https://fonts.googleapis.com/css2?family=Halimun&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Times New Roman', serif; /* Menggunakan font bergaya vintage */
-            background-color: #4b3d30; /* Latar belakang coklat tua ala vintage */
-            color: #f7f7f7; /* Warna teks terang untuk kontras */
+            font-family: 'Times New Roman', serif;
+            background-color: #4b3d30; /* Warna latar belakang vintage coklat tua */
+            color: #f7f7f7;
             margin: 0;
             padding: 20px;
             text-align: center;
-            overflow-y: scroll; /* Memastikan scroll tetap berfungsi */
-            height: 100vh; /* Agar tinggi halaman sesuai dengan viewport */
+            overflow-y: scroll;
+            height: 100vh;
+            position: relative;
         }
         h1 {
             margin-top: 50px;
-            color: #f7f7f7; /* Warna judul terang */
-            font-family: 'Great Vibes', cursive; /* Menggunakan font huruf sambung vintage */
-            font-size: 2.5em; /* Ukuran font judul */
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Efek bayangan pada judul */
+            color: #f7f7f7;
+            font-family: 'Halimun', cursive;
+            font-size: 2.5em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
         .message {
             margin-top: 20px;
-            font-size: 0.85em; /* Ukuran font lebih kecil */
+            font-size: 0.85em;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9); /* Latar belakang surat vintage */
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 5px;
             display: inline-block;
             max-width: 800px;
-            color: #3e3e3e; /* Warna teks surat */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan untuk memberi efek kedalaman */
-            border: 1px solid #c2b58e; /* Border halus untuk efek vintage */
-            overflow-wrap: break-word; /* Agar teks tidak terpotong */
-            line-height: 1.6; /* Jarak antar baris lebih besar untuk tampilan yang lebih nyaman */
-            font-style: italic; /* Membuat font menjadi miring untuk kesan lebih vintage */
-            background-image: url('https://www.transparenttextures.com/patterns/paper.png'); /* Efek kertas */
+            color: #3e3e3e;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid #c2b58e;
+            overflow-wrap: break-word;
+            line-height: 1.6;
+            font-style: italic;
+            background-image: url('https://www.transparenttextures.com/patterns/paper.png');
+            position: relative;
+            z-index: 1;
         }
         audio {
             margin-top: 20px;
         }
+        /* Animasi daun jatuh */
+        .leaf {
+            position: absolute;
+            top: -50px;
+            width: 30px;
+            height: 30px;
+            opacity: 0.8;
+            background-image: url('https://www.transparenttextures.com/patterns/leaves.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: fall 10s linear infinite;
+        }
+        /* Efek daun jatuh */
+        @keyframes fall {
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0.6; }
+        }
+        /* Membuat posisi daun acak */
+        .leaf:nth-child(1) { left: 10%; animation-duration: 12s; }
+        .leaf:nth-child(2) { left: 30%; animation-duration: 8s; }
+        .leaf:nth-child(3) { left: 50%; animation-duration: 10s; }
+        .leaf:nth-child(4) { left: 70%; animation-duration: 14s; }
+        .leaf:nth-child(5) { left: 90%; animation-duration: 11s; }
     </style>
 </head>
 <body>
-    <h1>This Little Secret Message for You</h1>
+    <h1>Pesan Rahasia untuk Kamu</h1>
     <div class="message">
-        Happy Birthday yang kesembilan belas Kapk. Semoga ini bukan ulang tahun terakhir. Maaf, aku tidak memiliki maksud khusus untuk mengucapkan ini Kak, tapi hanya ingin membalas ucapanmu saat aku ulang tahun kemarin. Ini hanya sekali ini saja, tenang, karena aku hanya ingin membalas dan tidak ada niatan untuk mengulang setiap tahun.<br><br>
+        Selamat Ulang Tahun yang ke-19, Kak. Semoga ini bukan ulang tahun terakhir. Maaf, aku tidak memiliki maksud khusus untuk mengucapkan ini, hanya ingin membalas ucapanmu saat aku ulang tahun kemarin. Ini hanya sekali ini saja, tenang saja.<br><br>
 
-        Aku tidak ingin membahas tentang hubungan kemarin yang terjadi hanya karena kegabutan diantara kita semata, tapi lebih ingin membahas sikap Kaka. Omong-omong soal chat dirimu dengan dia, sebenarnya tidak perlu kau sampai menjelaskan begitu. Sebab bukankah sudah jelas bahwa kita hanya ingin mencoba-coba saja? Lalu kamu yang memutuskan hanya sebulan waktunya (20 Agustus-20 September), dan keesokannya langsung asing kan? Juga saat di mana kamu bilang tidak bisa menemani, jarang ada waktu, dan tidak bisa jadi prioritas. Simple saja, it's because u never fallin' love, and cuz i fell first. Aku tidak tahu, apakah kamu melakukan itu berulang-ulang untuk mendapatkan pengakuan di lingkungan sosialmu, atau mungkin karena kamu belum menemukan yang lebih baik dari mantanmu, yang kamu sebut sebagai "best of the best" itu? Sehingga kamu mencoba-coba dengan semua perempuan saat hatimu kosong, karena hatimu itu tidak bisa kosong? Entahlah, hope u understand what i mean. Aku bukan mengatakannya karena sakit hati, namun ingin "bertanya-tanya" tentang apa yang mendasari sikapmu. Apakah itu gaya hidupmu? Atau ada faktor lain yang mempengaruhimu?<br><br>
+        Aku tidak ingin membahas hubungan kita kemarin yang terjadi hanya karena kegabutan semata, namun ingin mengomentari sikap Kakak. Sebenarnya tidak perlu sampai menjelaskan begitu banyak, bukankah sudah jelas kita hanya ingin mencoba-coba saja? Kemudian kamu yang menentukan waktu hanya sebulan (20 Agustus-20 September), dan keesokan harinya langsung jadi asing. Juga saat kamu bilang tidak bisa menemani, jarang ada waktu, dan tidak bisa jadi prioritas. Itu karena kamu tidak pernah jatuh cinta, sementara aku yang jatuh duluan.<br><br>
 
-        Karena memang aku tidak ada kedekatan khusus denganmu, jadi sulit untuk mengajakmu deep talk tak seperti orang-orang yang sudah dekat denganmu, padahal aku sempat berpikir untuk mengajakmu deep talk karena meskipun aku sering meragukan apa yang kamu ucapkan, selalu ada bagian yang membuatku berpikir, "yang ini terlihat tulus dari hati." Namun selalu aku tidak pernah tahu apakah kamu berbicara berdasarkan logika (hanya sekadar ucapan) atau benar-benar dari dalam hati.<br><br>
+        Karena aku tidak terlalu dekat denganmu, sulit untuk mengajak deep talk seperti teman-temanmu yang lain, padahal aku sering berpikir untuk membahas lebih dalam. Tapi selalu aku tidak tahu apakah yang kamu katakan itu benar dari hati atau hanya sekadar kata-kata.<br><br>
 
-        Selain semua itu, aku hanya ingin mengingatkan bahwa kamu sebentar lagi akan berusia dua puluh dan bukan lagi remaja SMP/SMA yang masih dalam masa bermain-main. Lagipula kamu juga kuliah, kan? Akan lebih baik jika kamu memperbaiki diri sebagai persiapan untuk menuju jenjang kedewasaan. Saring hal-hal negatif di sekitarmu, karena itu bisa mempengaruhi dirimu ke depannya. Agar kamu bisa fokus pada tujuan hidup dan rencana yang telah kamu bangun untuk masa depan, lebih baik mempersiapkan diri dari sekarang dengan bekal yang cukup daripada kerepotan nantinya. Aku tidak menilai lingkungan pergaulanmu itu buruk, tetapi ada baiknya juga memilih lingkungan yang positif, karena itu sangat berpengaruh terhadap kualitas individu. Lingkungan yang baik bisa membawa pengaruh positif, sedangkan lingkungan yang toksik bisa berdampak buruk, tergantung kepada kita. Apakah kita mampu mempertahankan pendirian dan menjaga diri, atau justru tidak memiliki pendirian yang kuat dan mudah terkontaminasi.<br><br>
+        Maaf jika pernyataanku ini terkesan menyinggung atau mengatur, tapi aku harap kamu bisa memahami pesan ini. Itu saja. Terima kasih. Semoga hidupmu selalu baik. Good Luck.<br><br>
 
-        Maaf jika pernyataanku ini terkesan menyinggung atau mengatur, padahal aku bukan siapa-siapa bagimu, tetapi aku harap kamu bisa memahami pesan tersirat dari pesanku di atas. Itu saja. Terima kasih. Have a good life. Good Luck.<br><br>
-
-        Oh ya, aku kembalikan bunga itu karena aku merasa tidak enak sama Kak, kemarin harus berpura-pura sampai harus membeli bunga. Maaf jika Roihanah saat itu terlalu memaksa. Kakak bisa kasih saja ke Baby, atau mungkin dijual lagi? Karena menurutku bunga itu masih bagus. Oh ya, sampaikan salam untuk Baby dari Kak Caroline (kinda miss her cute voice).
+        Oh ya, aku kembalikan bunga itu. Maaf jika waktu itu aku harus berpura-pura. Kakak bisa kasih ke Baby atau dijual lagi saja, karena bunga itu masih bagus.
     </div>
     <audio controls autoplay loop>
         <source src="https://raw.githubusercontent.com/aylaacarl/audio/main/snowfall.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
+        Browser kamu tidak mendukung elemen audio.
     </audio>
+    <!-- Daun jatuh -->
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
 </body>
 </html>
-
-
-
-
